@@ -1,0 +1,9 @@
+# docker stop sql1 > nul
+# docker rm sql1 > nul
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Bingo_baby!" \
+   --network my-vlan \
+   -p 1433:1433 --name sql1 -h sql1 \
+   -d \
+   mcr.microsoft.com/mssql/server:2017-latest
+

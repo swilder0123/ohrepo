@@ -1,0 +1,14 @@
+    SQL_PASSWORD="Bingo_baby!"
+    SQL_USER="sa"
+    SQL_SERVER="sql1"
+
+    docker run \
+    -d -p 8080:80 \
+    --name poi \
+    --network my-vlan \
+    -e "SQL_USER=$SQL_USER" \
+    -e "SQL_PASSWORD=$SQL_PASSWORD" \
+    -e "SQL_SERVER=$SQL_SERVER" \
+    -e "ASPNETCORE_ENVIRONMENT=Local" \
+    tripinsights/poi:1.0
+

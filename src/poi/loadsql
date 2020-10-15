@@ -1,0 +1,7 @@
+docker run \
+  --network my-vlan \
+  -e SQLFQDN=sql1 \
+  -e SQLUSER=sa \
+  -e SQLPASS="Bingo_baby!" \
+  -e SQLDB="mydrivingDB" \
+  openhack/data-load:v1
